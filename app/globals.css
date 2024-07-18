@@ -88,26 +88,11 @@ body {
   border-radius: 8px;
 }
 
-/* .tripCard-date::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 5px;
-  background-color: #575757;
-  top: 50%;
-  left: 110px;
-  transform: translateY(-50%);
-  border-radius: 8px;
+@media (max-width: 768px) {
+  body {
+    @apply p-0;
+  }
+  .timeline-container:before {
+    display: none;
+  }
 }
-
-.tripCard-date::after {
-  content: "";
-  width: 15px;
-  height: 15px;
-  position: absolute;
-  top: 50%;
-  left: 117.5px;
-  transform: translateY(-50%);
-  background-color: #575757;
-  border-radius: 50%;
-} */

@@ -6,8 +6,8 @@ interface TripCardType {
 
 const TripCard = ({ trip }: TripCardType) => {
   return (
-    <li className="flex">
-      <div className="w-[150px] pr-[50px] font-bold mt-2.5 text-right tripCard-date relative h-fit">
+    <li className="md:flex">
+      <div className="w-[150px] pr-[50px] font-bold mt-2.5 text-right tripCard-date relative h-fit pb-2.5 md:pb-0">
         {trip.date}
       </div>
       <div className="px-5 py-2 rounded bg-[#D4F1F4] grow shadow-md">
