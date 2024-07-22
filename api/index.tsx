@@ -1,11 +1,11 @@
-import { TripsType } from "@/types/trips";
+import { GetTripsTimelineRes } from "@/types/trips";
 
-const getTrips = async (): Promise<TripsType[]> => {
+const getTripsTimeline = async (): Promise<GetTripsTimelineRes[]> => {
   const response = await fetch(
-    "https://ignatius.df.r.appspot.com/api/schedules"
+    "https://ignatius.df.r.appspot.com/api/schedules/timeline"
   );
   const data = await response.json();
   return data;
 };
 
-export { getTrips };
+export { getTripsTimeline };

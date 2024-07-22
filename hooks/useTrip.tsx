@@ -1,11 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
-import { getTrips } from "@/api";
-import { TripsType } from "@/types/trips";
+import { getTripsTimeline } from "@/api";
+import { TimelineType } from "@/types/trips";
 
 const useTrip = () => {
   const { data, isLoading } = useQuery({
-    queryKey: ["getTrips"],
-    queryFn: getTrips,
+    queryKey: ["getTripsTimeline"],
+    queryFn: async () => {
+      const res = await getTripsTimeline();
+      const array: TimelineType[] = Object.keys(res).map((key) => ({
+        date: key,
+        // @ts-ignore: Unreachable code error
+        trips: res[key],
+      }));
+
+      return array;
+    },
     initialData: [],
   });
 

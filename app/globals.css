@@ -68,31 +68,32 @@
   }
 }
 
+:root {
+  --primary: #2f435a;
+}
+
 body {
   @apply flex justify-center items-center py-[100px];
-  @apply bg-[#2F435A];
+  @apply bg-[var(--primary)];
   font-family: "Noto Sans TC", sans-serif;
-}
-
-.timeline-container {
-  @apply relative;
-}
-
-.timeline-container::before {
-  content: "";
-  position: absolute;
-  left: 122.5px;
-  width: 5px;
-  height: 100%;
-  background-color: #575757;
-  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
   body {
     @apply p-0;
   }
-  .timeline-container:before {
-    display: none;
-  }
 }
+
+/* .timeline {
+  @apply relative;
+}
+.timeline:before {
+  content: "";
+  width: 10px;
+  height: calc(100% + 20px);
+  background: var(--primary);
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  z-index: 0;
+} */
