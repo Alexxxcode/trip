@@ -6,9 +6,9 @@ const HomeContainer = () => {
   const { trips, isLoading } = useTrip();
 
   return (
-    <main className="w-[700px] min-h-screen md:min-h-[600px] rounded-md bg-white p-5 shadow-md">
+    <div>
       {isLoading ? (
-        "loading..."
+        <p className="text-lg text-center">loading...</p>
       ) : (
         <div className="grid gap-y-5">
           {trips.map((trip) => (
@@ -16,7 +16,7 @@ const HomeContainer = () => {
           ))}
         </div>
       )}
-    </main>
+    </div>
   );
 };
 

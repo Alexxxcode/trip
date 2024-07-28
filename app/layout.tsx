@@ -24,7 +24,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <main className="w-[700px] min-h-screen md:min-h-[600px] rounded-md bg-white p-5 shadow-md">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
